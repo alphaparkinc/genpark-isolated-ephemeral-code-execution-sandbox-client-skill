@@ -1,0 +1,41 @@
+{
+  "name": "genpark-isolated-ephemeral-code-execution-sandbox-client-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Isolated ephemeral code execution sandbox client spawning secure microVM runtimes with stdout streaming.",
+  "author": "genpark",
+  "category": "cloud-sandbox",
+  "tags": [
+    "e2b",
+    "code-interpreter",
+    "microvm-sandbox",
+    "safe-execution",
+    "developer-agent"
+  ],
+  "inputs": {
+    "language": {
+      "type": "string"
+    },
+    "script_code": {
+      "type": "string"
+    },
+    "timeout_ms": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "sandbox_execution_id": {
+      "type": "string"
+    },
+    "microvm_boot_latency_ms": {
+      "type": "integer"
+    },
+    "stdout_captured": {
+      "type": "string"
+    },
+    "exit_code": {
+      "type": "integer"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
